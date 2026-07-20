@@ -2,31 +2,43 @@
 
 ## Project Overview
 
-The Calculator is a simple web application that allows users to perform basic arithmetic calculations through an interactive interface.
+The Calculator is a web-based application that enables users to perform basic arithmetic operations through a simple and intuitive user interface. The project is designed to strengthen fundamental web development skills using HTML, CSS, and JavaScript.
 
-## Objectives
+---
+
+## Project Objectives
 
 - Build a responsive calculator using HTML, CSS, and JavaScript.
-- Learn JavaScript event handling.
-- Understand DOM manipulation.
-- Practice problem-solving through programming.
+- Practice JavaScript programming and DOM manipulation.
+- Learn event handling and user interactions.
+- Apply responsive web design principles.
+- Develop clean, readable, and maintainable code.
+
+---
 
 ## Functional Requirements
 
-The system should allow users to:
+The application shall allow users to:
 
-- Enter numbers.
-- Perform addition.
-- Perform subtraction.
-- Perform multiplication.
-- Perform division.
-- Clear the display.
-- Delete the last entered digit.
-- Display the calculation result.
+- Enter numbers (0–9).
+- Perform addition (+).
+- Perform subtraction (−).
+- Perform multiplication (×).
+- Perform division (÷).
+- Enter decimal numbers.
+- Clear all input (AC).
+- Delete the last entered character (⌫).
+- Display calculation results.
+- Prevent invalid calculations where possible.
+
+---
 
 ## Non-Functional Requirements
 
-- Responsive design for desktop and mobile.
-- User-friendly interface.
-- Fast response time.
-- Clean and readable code.
+The application should:
+
+- Be responsive across desktop and mobile devices.
+- Provide a clean and user-friendly interface.
+- Respond instantly to user interactions.
+- Follow clean coding practices.
+- Be compatible with modern web browsers.

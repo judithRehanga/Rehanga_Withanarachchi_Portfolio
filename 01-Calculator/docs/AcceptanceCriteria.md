@@ -1,51 +1,69 @@
-# Acceptance Criteria
+# Calculator - Acceptance Criteria
 
-## Calculator
+## AC1 - Number Input
 
-### AC-01
+**Given** the calculator is open
 
-Given the calculator is open,
+**When** the user presses any number button
 
-When the user clicks a number,
-
-Then the number should appear on the display.
+**Then** the selected number should appear on the display.
 
 ---
 
-### AC-02
+## AC2 - Addition
 
-Given numbers are entered,
+**Given** the user enters two numbers
 
-When the user selects an operator,
+**When** the "+" operator and "=" are pressed
 
-Then the operator should be displayed correctly.
-
----
-
-### AC-03
-
-Given a valid calculation,
-
-When the user presses "=",
-
-Then the correct result should be displayed.
+**Then** the correct sum should be displayed.
 
 ---
 
-### AC-04
+## AC3 - Subtraction
 
-Given the display contains values,
+**Given** the user enters two numbers
 
-When the user presses "AC",
+**When** the "-" operator and "=" are pressed
 
-Then the display should be cleared.
+**Then** the correct difference should be displayed.
 
 ---
 
-### AC-05
+## AC4 - Multiplication
 
-Given the display contains numbers,
+**Given** the user enters two numbers
 
-When the user presses "⌫",
+**When** the "×" operator and "=" are pressed
 
-Then the last entered digit should be removed.
+**Then** the correct product should be displayed.
+
+---
+
+## AC5 - Division
+
+**Given** the user enters two numbers
+
+**When** the "÷" operator and "=" are pressed
+
+**Then** the correct quotient should be displayed.
+
+---
+
+## AC6 - Clear
+
+**Given** values are displayed
+
+**When** the user presses "AC"
+
+**Then** the display should reset to 0.
+
+---
+
+## AC7 - Delete
+
+**Given** the display contains multiple digits
+
+**When** the user presses "⌫"
+
+**Then** the last entered character should be removed.

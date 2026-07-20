@@ -1,51 +1,79 @@
-# User Stories
+# Calculator - User Stories
 
-## Calculator
+## User Story 1
 
-### US-01
+**As a** user,
 
-As a user,
+**I want** to enter numbers,
 
-I want to click number buttons,
-
-So that I can enter numbers.
+**So that** I can perform calculations.
 
 ---
 
-### US-02
+## User Story 2
 
-As a user,
+**As a** user,
 
-I want to perform basic arithmetic operations,
+**I want** to perform addition,
 
-So that I can solve simple calculations.
-
----
-
-### US-03
-
-As a user,
-
-I want to clear the calculator,
-
-So that I can start a new calculation.
+**So that** I can calculate totals.
 
 ---
 
-### US-04
+## User Story 3
 
-As a user,
+**As a** user,
 
-I want to delete the last digit entered,
+**I want** to perform subtraction,
 
-So that I can correct typing mistakes.
+**So that** I can calculate differences.
 
 ---
 
-### US-05
+## User Story 4
 
-As a user,
+**As a** user,
 
-I want to see the result immediately,
+**I want** to perform multiplication,
 
-So that I know the answer to my calculation.
+**So that** I can calculate products.
+
+---
+
+## User Story 5
+
+**As a** user,
+
+**I want** to perform division,
+
+**So that** I can calculate quotients.
+
+---
+
+## User Story 6
+
+**As a** user,
+
+**I want** to clear the calculator,
+
+**So that** I can start a new calculation.
+
+---
+
+## User Story 7
+
+**As a** user,
+
+**I want** to delete the last entered character,
+
+**So that** I can correct typing mistakes.
+
+---
+
+## User Story 8
+
+**As a** user,
+
+**I want** to see the result after pressing "=",
+
+**So that** I can complete my calculation.
