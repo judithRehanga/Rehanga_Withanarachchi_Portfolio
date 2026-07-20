@@ -15,49 +15,58 @@ let currentOperator = "";
 let shouldResetDisplay = false;
 
 function calculate() {
+  secondNumber = display.value;
 
-    secondNumber = display.value;
+  console.log(firstNumber);
+  console.log(currentOperator);
+  console.log(secondNumber);
 
-    console.log(firstNumber);
-    console.log(currentOperator);
-    console.log(secondNumber);
+  const num1 = Number(firstNumber);
+  const num2 = Number(secondNumber);
 
-    const num1 = Number(firstNumber);
-    const num2 = Number(secondNumber);
+  let result = 0;
 
-    let result = 0;
+  switch (currentOperator) {
+    case "+":
+      result = num1 + num2;
+      break;
 
-    switch (currentOperator) {
+    case "-":
+      result = num1 - num2;
+      break;
 
-        case "+":
-            result = num1 + num2;
-            break;
+    case "×":
+      result = num1 * num2;
+      break;
 
-        case "-":
-            result = num1 - num2;
-            break;
+    case "÷":
+      if (num2 === 0) {
+        display.value = "Error";
 
-        case "×":
-            result = num1 * num2;
-            break;
+        return;
+      }
 
-        case "÷":
-            result = num1 / num2;
-            break;
+      result = num1 / num2;
+      break;
 
-        case "%":
-            result = num1 % num2;
-            break;
-    }
+    case "%":
+      result = num1 % num2;
+      break;
+  }
 
-    display.value = result;
+  display.value = result;
 
-    firstNumber = result.toString();
+  if (isNaN(result)) {
+    display.value = "Error";
 
-    currentOperator = "";
+    return;
+  }
 
-    shouldResetDisplay = true;
+  firstNumber = result.toString();
 
+  currentOperator = "";
+
+  shouldResetDisplay = true;
 }
 
 // Loop through every button
@@ -71,6 +80,19 @@ buttons.forEach((button) => {
     if (button.classList.contains("function")) {
       if (value === "AC") {
         display.value = "0";
+
+        firstNumber = "";
+        secondNumber = "";
+        currentOperator = "";
+        shouldResetDisplay = false;
+      }
+
+      if (value === "⌫") {
+        display.value = display.value.slice(0, -1);
+
+        if (display.value === "") {
+          display.value = "0";
+        }
       }
 
       console.log("Function Button");
@@ -81,12 +103,17 @@ buttons.forEach((button) => {
     // Operator Buttons
     // ==============================
     if (button.classList.contains("operator")) {
+      if (display.value === "0" && firstNumber === "") {
+        return;
+      }
+
+      if (currentOperator !== "" && !shouldResetDisplay) {
+        calculate();
+      }
+
       firstNumber = display.value;
       currentOperator = value;
       shouldResetDisplay = true;
-
-      console.log("First Number:", firstNumber);
-      console.log("Operator:", currentOperator);
 
       return;
     }
@@ -95,12 +122,18 @@ buttons.forEach((button) => {
     // Equals Button
     // ==============================
     if (button.classList.contains("equals")) {
+      if (firstNumber === "" || currentOperator === "") {
+        return;
+      }
 
-    calculate();
+      calculate();
 
-    return;
+      return;
+    }
 
-}
+    if (value === "." && display.value.includes(".")) {
+      return;
+    }
 
     // ==============================
     // Number Buttons

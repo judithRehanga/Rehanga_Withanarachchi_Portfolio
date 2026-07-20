@@ -2,171 +2,151 @@
    Google Font
 ========================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 /* ==========================
    Reset
 ========================== */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
+  background: #f5f7fa;
 
-    background:#F5F7FA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    min-height:100vh;
-
+  min-height: 100vh;
 }
 
-.calculator{
+.calculator {
+  width: 380px;
 
-    width:380px;
+  background: white;
 
-    background:white;
+  padding: 25px;
 
-    padding:25px;
+  border-radius: 20px;
 
-    border-radius:20px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,0.1);
-
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-.calculator h1{
+.calculator h1 {
+  text-align: center;
 
-    text-align:center;
+  color: #1f2937;
 
-    color:#1F2937;
+  margin-bottom: 25px;
 
-    margin-bottom:25px;
-
-    font-weight:600;
-
+  font-weight: 600;
 }
 
-.display{
-
-    margin-bottom:20px;
-
+.display {
+  margin-bottom: 20px;
 }
 
-.display input{
+.display input {
+  font-weight: 600;
 
-    width:100%;
+  letter-spacing: 1px;
 
-    height:70px;
+  width: 100%;
 
-    border:none;
+  height: 70px;
 
-    outline:none;
+  border: none;
 
-    background:#F3F4F6;
+  outline: none;
 
-    border-radius:12px;
+  background: #f3f4f6;
 
-    text-align:right;
+  border-radius: 12px;
 
-    padding:20px;
+  text-align: right;
 
-    font-size:2rem;
+  padding: 20px;
 
-    color:#1F2937;
+  font-size: 2rem;
 
+  color: #1f2937;
 }
 
-.buttons{
+.buttons {
+  display: grid;
 
-    display:grid;
+  grid-template-columns: repeat(4, 1fr);
 
-    grid-template-columns:repeat(4,1fr);
-
-    gap:15px;
-
+  gap: 15px;
 }
 
-.buttons button{
+.buttons button {
+  height: 65px;
 
-    height:65px;
+  border: none;
 
-    border:none;
+  border-radius: 15px;
 
-    border-radius:15px;
+  background: #f3f4f6;
 
-    background:#F3F4F6;
+  font-size: 1.3rem;
 
-    font-size:1.3rem;
+  font-weight: 600;
 
-    font-weight:600;
+  color: #1f2937;
 
-    color:#1F2937;
+  cursor: pointer;
 
-    cursor:pointer;
-
-    transition:all .25s ease;
-
+  transition: all 0.25s ease;
 }
 
-.buttons button:hover{
+.buttons button:hover {
+  background: #d1d5db;
 
-    background:#D1D5DB;
+  transform: translateY(-2px);
+}
 
-    transform:translateY(-2px);
+.buttons button:active{
+
+    transform:scale(.95);
 
 }
 
-.operator{
+.operator {
+  background: #dbeafe !important;
 
-    background:#DBEAFE !important;
-
-    color:#2563EB;
-
+  color: #2563eb;
 }
 
-.operator:hover{
-
-    background:#BFDBFE !important;
-
+.operator:hover {
+  background: #bfdbfe !important;
 }
 
-.function{
+.function {
+  background: #fee2e2 !important;
 
-    background:#FEE2E2 !important;
-
-    color:#DC2626;
-
+  color: #dc2626;
 }
 
-.function:hover{
-
-    background:#FECACA !important;
-
+.function:hover {
+  background: #fecaca !important;
 }
 
-.equals{
+.equals {
+  background: #2563eb !important;
 
-    background:#2563EB !important;
-
-    color:white;
-
+  color: white;
 }
 
-.equals:hover{
-
-    background:#1D4ED8 !important;
-
+.equals:hover {
+  background: #1d4ed8 !important;
 }
 
-.zero{
-
-    grid-column:span 2;
-
+.zero {
+  grid-column: span 2;
 }
