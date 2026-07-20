@@ -54,6 +54,11 @@ function calculate() {
       if (num2 === 0) {
         display.value = "Error";
 
+        firstNumber = "";
+        secondNumber = "";
+        currentOperator = "";
+        shouldResetDisplay = true;
+
         return;
       }
 
@@ -65,7 +70,7 @@ function calculate() {
       break;
   }
 
-  display.value = result;
+  display.value = result.toString();
 
   if (isNaN(result)) {
     display.value = "Error";
@@ -147,6 +152,5 @@ buttons.forEach((button) => {
     } else {
       display.value += value;
     }
-
   });
 });

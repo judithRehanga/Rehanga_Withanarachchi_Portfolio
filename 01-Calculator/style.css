@@ -28,6 +28,8 @@ body {
 .calculator {
   width: 380px;
 
+  overflow: hidden;
+
   background: white;
 
   padding: 25px;
