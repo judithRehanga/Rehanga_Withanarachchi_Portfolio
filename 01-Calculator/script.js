@@ -2,8 +2,6 @@
 // Calculator
 // ==============================
 
-console.log("Calculator Loaded");
-
 // Select elements
 const display = document.getElementById("display");
 const buttons = document.querySelectorAll("button");
@@ -14,12 +12,25 @@ let secondNumber = "";
 let currentOperator = "";
 let shouldResetDisplay = false;
 
+function clearCalculator() {
+  display.value = "0";
+
+  firstNumber = "";
+  secondNumber = "";
+  currentOperator = "";
+  shouldResetDisplay = false;
+}
+
+function deleteLastCharacter() {
+  display.value = display.value.slice(0, -1);
+
+  if (display.value === "") {
+    display.value = "0";
+  }
+}
+
 function calculate() {
   secondNumber = display.value;
-
-  console.log(firstNumber);
-  console.log(currentOperator);
-  console.log(secondNumber);
 
   const num1 = Number(firstNumber);
   const num2 = Number(secondNumber);
@@ -79,23 +90,13 @@ buttons.forEach((button) => {
     // ==============================
     if (button.classList.contains("function")) {
       if (value === "AC") {
-        display.value = "0";
-
-        firstNumber = "";
-        secondNumber = "";
-        currentOperator = "";
-        shouldResetDisplay = false;
+        clearCalculator();
       }
 
       if (value === "⌫") {
-        display.value = display.value.slice(0, -1);
-
-        if (display.value === "") {
-          display.value = "0";
-        }
+        deleteLastCharacter();
       }
 
-      console.log("Function Button");
       return;
     }
 
@@ -147,6 +148,5 @@ buttons.forEach((button) => {
       display.value += value;
     }
 
-    console.log("Number Button");
   });
 });
